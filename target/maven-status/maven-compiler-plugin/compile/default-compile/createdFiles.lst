@@ -1,0 +1,8 @@
+Pojo\TokenCeredentials.class
+Pojo\BookingDates.class
+Pojo\PartialUpdate.class
+JsonBuilderClass\JsonToken.class
+Pojo\GetBookingID.class
+PropertyReader\readProperty.class
+Pojo\CreateBooking.class
+Pojo\GetBooking.class
