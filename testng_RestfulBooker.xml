@@ -6,7 +6,7 @@
     </listeners>
 
 
-    <test verbose="2" preserve-order="true" name="C:/Users/ankitmaheshwari/OneDrive - Nagarro/NAGP Workshop/Ankit_Maheshwari_3181823_NAGP_RestAssured">
+    <test verbose="2" preserve-order="true" name="D:\Ankit_Maheshwari_3181823_NAGP_RestAssured">
 <classes>
     <class name="Test.RestfulBookerTest"></class>
 </classes>

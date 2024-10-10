@@ -53,15 +53,16 @@ public class RestfulBookerTest {
 public void setup() throws ParseException {
         baseURIAuth= readPropertyObj.readPropertyFile("baseURI");
         RestAssured.baseURI=baseURIAuth;
+      //setupAuthentication();
 }
 
     @Test(groups = {"Regression" }, priority = 0,description = "Test Case is used to Authenticate")
-    public void setupAuthentication(){
+    public void setupAuthentication() throws NullPointerException{
       logger.info("Inside Authentication API");
         TokenCeredentials objTokenPayload= Payload.AuthorizationPayload();
         Response response= RestUtil.postRequest("/auth",objTokenPayload);
         tokenGlobal= response.jsonPath().get("token");
-        RestUtil.printResponseLoginReport(response);
+       // RestUtil.printResponseLoginReport(response);
     }
 
 
@@ -71,14 +72,15 @@ public void setup() throws ParseException {
         CreateBooking createNewBooking= Payload.createBookingPayload();
         Response responseCreateBooking=   RestUtil.postRequest("booking",createNewBooking);
         BookingID= responseCreateBooking.jsonPath().get("bookingid");
-        RestUtil.printResponseLoginReport(responseCreateBooking);
+        //RestUtil.printResponseLoginReport(responseCreateBooking);
 
     }
 
 
     @Test(groups = {"Regression" }, priority = 2,description = "Test Case is used fetch all bookings made so far")
 public void GetAllBookingID() {
-        RestUtil.printResponseLoginReport(RestUtil.getRequest("booking"));
+        RestUtil.getRequest("booking");
+        //RestUtil.printResponseLoginReport(RestUtil.getRequest("booking"));
     }
 
 
@@ -86,14 +88,16 @@ public void GetAllBookingID() {
     @Test(groups = {"Regression" }, priority = 3,description = "Test Case is used to fetch Booking ID By filtering with Name")
     public void GetBookingIDByName(){
       Map<String, String> queryParamNames= Payload.returnFirstNameLastName();
-        RestUtil.printResponseLoginReport(RestUtil.getRequestQueryParam("booking",queryParamNames));
+        RestUtil.getRequestQueryParam("booking",queryParamNames);
+        //RestUtil.printResponseLoginReport(RestUtil.getRequestQueryParam("booking",queryParamNames));
 
     }
 
     @Test(groups = {"Regression" }, priority = 4,description = "Test Case is used to fetch Booking id by check in check out date")
     public void GetBookingIDByCheckInCheckOUTDate(){
         Map<String, String> queryParamDates= Payload.returnCheckInCheckOut();
-        RestUtil.printResponseLoginReport(RestUtil.getRequestQueryParam("booking",queryParamDates));
+        RestUtil.getRequestQueryParam("booking",queryParamDates);
+        //RestUtil.printResponseLoginReport(RestUtil.getRequestQueryParam("booking",queryParamDates));
 
     }
 
@@ -101,25 +105,29 @@ public void GetAllBookingID() {
     @Test(groups = {"Regression" }, priority = 5,description = "Test Case is used to fetch Booking detail By ID")
     //Get Booking By filtering with ID
     public void GetBookingDetailFilterByID(){
-        RestUtil.printResponseLoginReport(RestUtil.getRequest("booking"+"/"+BookingID));
+        RestUtil.getRequest("booking"+"/"+BookingID);
+        //RestUtil.printResponseLoginReport(RestUtil.getRequest("booking"+"/"+BookingID));
   }
 
     @Test(groups = {"Regression" }, priority = 6,description = "Test Case is used to update booking based on input ID")
     public void updateBooking(){
       CreateBooking updateBookingObj= Payload.updateBookingPayload();
-        RestUtil.printResponseLoginReport(RestUtil.putRequest("booking"+"/"+BookingID,tokenGlobal,updateBookingObj));
+        RestUtil.putRequest("booking"+"/"+BookingID,tokenGlobal,updateBookingObj);
+        //RestUtil.printResponseLoginReport(RestUtil.putRequest("booking"+"/"+BookingID,tokenGlobal,updateBookingObj));
     }
 
     @Test(groups = {"Regression" }, priority = 7,description = "Test Case is used to partially update booking based on input ID")
     public void partialUpdateBooking(){
         PartialUpdate partialUpdateObj= Payload.partialUpdatePayload();
-        RestUtil.printResponseLoginReport(RestUtil.patchRequest("booking" + "/" + BookingID,tokenGlobal,partialUpdateObj));
+        //RestUtil.printResponseLoginReport(RestUtil.patchRequest("booking" + "/" + BookingID,tokenGlobal,partialUpdateObj));
+        RestUtil.patchRequest("booking" + "/" + BookingID,tokenGlobal,partialUpdateObj);
 
     }
 
     @Test(groups = {"Regression" }, priority = 8,description = "Test Case is used to delete booking based on input ID")
     public void deleteBooking(){
-        RestUtil.printResponseLoginReport(RestUtil.deleteRequest("booking"+"/"+BookingID,tokenGlobal));
+        RestUtil.deleteRequest("booking"+"/"+BookingID,tokenGlobal);
+        //RestUtil.printResponseLoginReport(RestUtil.deleteRequest("booking"+"/"+BookingID,tokenGlobal));
 
 
     }
