@@ -1,5 +1,8 @@
+SpecBuilder\Payload.class
+Test\RestfulBookerTest.class
+RestUtil\RestUtil.class
 ExtentReport\ExtentReportManager.class
-Test\CreateToken.class
 ExtentReport\TestNGListener.class
 SpecBuilder\RestfulBookerSpecBuilder.class
+Utils\ConfigExcelIO.class
 Utils\ExcelFileIO.class

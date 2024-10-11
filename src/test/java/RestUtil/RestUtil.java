@@ -44,7 +44,7 @@ private static RequestSpecification getRequestSpecification(){
     }
     public static Response postRequest(String endPoint, Object payload){
     RequestSpecification postRequest= postRequestSpecification(payload);
-        printRequestLoginReport(postRequest);
+       // printRequestLoginReport(postRequest);
         return   postRequest.post(endPoint).then().log().all().assertThat().statusCode(200).extract().response();
 
 
@@ -72,13 +72,13 @@ public static void printResponseLoginReport(Response response){
 }
 public static Response getRequest(String endPoint){
     RequestSpecification getRequest= getRequestSpecification();
-    printRequestLoginReport(getRequest);
+  //  printRequestLoginReport(getRequest);
    return getRequest.get(endPoint).then().log().all().assertThat().statusCode(200).extract().response();
 
 }
 public static Response getRequestQueryParam(String endPoint, Map<String, String> queryParam){
     RequestSpecification getRequestQueryParam= getRequestWithQueryParamSpecification(queryParam);
-    printRequestLoginReport(getRequestQueryParam);
+    //printRequestLoginReport(getRequestQueryParam);
     return getRequestQueryParam
             .get(endPoint)
             .then().log().all().assertThat().statusCode(200).extract().response();
@@ -89,7 +89,7 @@ public static Response getRequestQueryParam(String endPoint, Map<String, String>
 public static Response putRequest(String endPoint, String CookieToken,Object payload){
 
     RequestSpecification putRequestSpecification= putAndpatchRequestWithQueryParamSpecification(CookieToken,payload);
-    printRequestLoginReport(putRequestSpecification);
+   // printRequestLoginReport(putRequestSpecification);
     return putRequestSpecification
             .when()
             .put(endPoint)
@@ -97,7 +97,7 @@ public static Response putRequest(String endPoint, String CookieToken,Object pay
 }
     public static Response patchRequest(String endPoint, String CookieToken,Object payload){
         RequestSpecification patchRequestSpecification= putAndpatchRequestWithQueryParamSpecification(CookieToken,payload);
-        printRequestLoginReport(patchRequestSpecification);
+      //  printRequestLoginReport(patchRequestSpecification);
         return patchRequestSpecification
                 .when()
                 .patch(endPoint)

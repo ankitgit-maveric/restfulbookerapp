@@ -1,11 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-23T16:29:19 IST" name="ExtentReport.TestNGListener" finished-at="2024-06-23T16:29:19 IST" duration-ms="15">
+  <suite started-at="2024-10-10T18:55:19 IST" name="Command line suite" finished-at="2024-10-10T18:55:34 IST" duration-ms="15717">
     <groups>
+      <group name="Regression">
+        <method signature="RestfulBookerTest.setupAuthentication()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" name="setupAuthentication" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.createBooking()[pri:1, instance:Test.RestfulBookerTest@1ef3efa8]" name="createBooking" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.GetAllBookingID()[pri:2, instance:Test.RestfulBookerTest@1ef3efa8]" name="GetAllBookingID" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.GetBookingIDByName()[pri:3, instance:Test.RestfulBookerTest@1ef3efa8]" name="GetBookingIDByName" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.GetBookingIDByCheckInCheckOUTDate()[pri:4, instance:Test.RestfulBookerTest@1ef3efa8]" name="GetBookingIDByCheckInCheckOUTDate" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.GetBookingDetailFilterByID()[pri:5, instance:Test.RestfulBookerTest@1ef3efa8]" name="GetBookingDetailFilterByID" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.updateBooking()[pri:6, instance:Test.RestfulBookerTest@1ef3efa8]" name="updateBooking" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.partialUpdateBooking()[pri:7, instance:Test.RestfulBookerTest@1ef3efa8]" name="partialUpdateBooking" class="Test.RestfulBookerTest"/>
+        <method signature="RestfulBookerTest.deleteBooking()[pri:8, instance:Test.RestfulBookerTest@1ef3efa8]" name="deleteBooking" class="Test.RestfulBookerTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2024-06-23T16:29:19 IST" name="Command line test" finished-at="2024-06-23T16:29:19 IST" duration-ms="15">
+    <test started-at="2024-10-10T18:55:19 IST" name="Command line test" finished-at="2024-10-10T18:55:34 IST" duration-ms="15717">
+      <class name="Test.RestfulBookerTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:19 IST" name="setup" finished-at="2024-10-10T18:55:19 IST" duration-ms="395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="setupAuthentication()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:19 IST" name="setupAuthentication" description="Test Case is used to Authenticate" finished-at="2024-10-10T18:55:23 IST" duration-ms="3396" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAuthentication -->
+        <test-method signature="createBooking()[pri:1, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:23 IST" name="createBooking" description="Test Case is used to create Booking" finished-at="2024-10-10T18:55:25 IST" duration-ms="2031" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBooking -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:23 IST" name="setup" finished-at="2024-10-10T18:55:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:25 IST" name="setup" finished-at="2024-10-10T18:55:25 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="GetAllBookingID()[pri:2, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:25 IST" name="GetAllBookingID" description="Test Case is used fetch all bookings made so far" finished-at="2024-10-10T18:55:26 IST" duration-ms="1651" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllBookingID -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:26 IST" name="setup" finished-at="2024-10-10T18:55:26 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="GetBookingIDByName()[pri:3, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:26 IST" name="GetBookingIDByName" description="Test Case is used to fetch Booking ID By filtering with Name" finished-at="2024-10-10T18:55:28 IST" duration-ms="1367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetBookingIDByName -->
+        <test-method signature="GetBookingIDByCheckInCheckOUTDate()[pri:4, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:28 IST" name="GetBookingIDByCheckInCheckOUTDate" description="Test Case is used to fetch Booking id by check in check out date" finished-at="2024-10-10T18:55:29 IST" duration-ms="1401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetBookingIDByCheckInCheckOUTDate -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:28 IST" name="setup" finished-at="2024-10-10T18:55:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="GetBookingDetailFilterByID()[pri:5, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:29 IST" name="GetBookingDetailFilterByID" description="Test Case is used to fetch Booking detail By ID" finished-at="2024-10-10T18:55:30 IST" duration-ms="1319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetBookingDetailFilterByID -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:29 IST" name="setup" finished-at="2024-10-10T18:55:29 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:30 IST" name="setup" finished-at="2024-10-10T18:55:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="updateBooking()[pri:6, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:30 IST" name="updateBooking" description="Test Case is used to update booking based on input ID" finished-at="2024-10-10T18:55:32 IST" duration-ms="1336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBooking -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:32 IST" name="setup" finished-at="2024-10-10T18:55:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="partialUpdateBooking()[pri:7, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:32 IST" name="partialUpdateBooking" description="Test Case is used to partially update booking based on input ID" finished-at="2024-10-10T18:55:33 IST" duration-ms="1392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- partialUpdateBooking -->
+        <test-method signature="deleteBooking()[pri:8, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:33 IST" name="deleteBooking" description="Test Case is used to delete booking based on input ID" finished-at="2024-10-10T18:55:34 IST" duration-ms="1356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteBooking -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.RestfulBookerTest@1ef3efa8]" started-at="2024-10-10T18:55:33 IST" name="setup" finished-at="2024-10-10T18:55:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- Test.RestfulBookerTest -->
     </test> <!-- Command line test -->
-  </suite> <!-- ExtentReport.TestNGListener -->
+  </suite> <!-- Command line suite -->
 </testng-results>
